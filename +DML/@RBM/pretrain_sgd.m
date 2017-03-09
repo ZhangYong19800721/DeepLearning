@@ -30,7 +30,7 @@ function obj = pretrain_sgd(obj,train_data,learn_rate_min,learn_rate_max,max_ite
 
     for iteration = 1:max_iteration
         % È¡Ò»¸öminibatch
-        minibatch_index = mod(minibatch_index,minibatch_num) + 1;
+        minibatch_index = mod(iteration-1,minibatch_num) + 1;
         minibatch = train_data(:,:,minibatch_index);
         
         [delta_weight, delta_hidden_bias, delta_visual_bias, recon_error] = cd1(obj,minibatch);
