@@ -4,7 +4,7 @@ function obj = train(obj,train_data,learn_rate_min,learn_rate_max,max_iteration)
     obj = obj.pretrain(train_data,learn_rate_min,learn_rate_max,max_iteration); % 使用CD1快速算法进行预训练
     
 %     temp = obj;
-    save('check_point_4_layer784x4096x2048x1024x512.mat');
+%     save('check_point_4_layer784x4096x2048x1024x512.mat');
 %     temp.encoder_layers = obj.encoder_layers;
 %     temp.decoder_layers = obj.decoder_layers;
 %     obj = temp;

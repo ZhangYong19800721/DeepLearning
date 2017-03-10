@@ -25,7 +25,6 @@ classdef RBM
     end
     
     methods
-        obj = initialize(obj,train_data) % 初始化权值矩阵，隐神经元偏置和显神经元偏置
         obj = initialize_whv(obj,weight,hidden_bias,visual_bias) % 使用权值、隐神经元偏置、显神经元偏置直接初始化RBM
         obj = initialize_sgd(obj,train_data) % 初始化权值矩阵，隐神经元偏置和显神经元偏置
 
@@ -42,6 +41,7 @@ classdef RBM
     
     methods (Access = private)
         [delta_weight,delta_hidden_bias,delta_visual_bias,recon_error] = cd1(obj, train_data) % CD1快速训练算法
+        obj = initialize(obj,train_data) % 初始化权值矩阵，隐神经元偏置和显神经元偏置
     end
 end
 
