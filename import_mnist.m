@@ -2,7 +2,7 @@ function [train_images,train_labels,test_images,test_labels] = import_mnist(file
     load(file_name);
     train_images = mnist_train_images;
     train_labels = mnist_train_labels;
-    minibatch_size = 1000;
+    minibatch_size = 100;
     minibatch_num = 0;
     
     for n = 1:length(train_labels)

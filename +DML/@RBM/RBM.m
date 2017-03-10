@@ -8,8 +8,6 @@ classdef RBM
         weight; % The weight matrix, dimension = (number of hidden units * number of visual units)
         hidden_bias; % The bias for hidden units
         visual_bias; % The bias for visual units
-        hidden_unit; % The state of hidden neural
-        visual_unit; % The state of visual neural
     end
     
     methods
@@ -19,8 +17,6 @@ classdef RBM
             obj.weight = zeros(obj.num_hidden,obj.num_visual);
             obj.hidden_bias = zeros(obj.num_hidden,1);
             obj.visual_bias = zeros(obj.num_visual,1);
-            obj.hidden_unit = zeros(obj.num_hidden,1);
-            obj.visual_unit = zeros(obj.num_visual,1);
         end
     end
     
